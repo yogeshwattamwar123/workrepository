@@ -1,0 +1,8 @@
+<h2>Products List</h2>
+<ol>
+  <li *ngFor="let product of products">
+    <button (click)="GetDetails(product)">{{product.name}}</button>
+  </li>
+</ol>
+<br>
+<router-outlet></router-outlet>

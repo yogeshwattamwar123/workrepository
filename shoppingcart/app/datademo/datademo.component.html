@@ -1,0 +1,16 @@
+<h2>Data binding</h2>
+<h3>{{title}}</h3>
+<dl>
+  <dt>Name</dt>
+  <dd>{{product.name}}</dd>
+  <dt>Price</dt>
+  <dd>{{product.price}}</dd>
+  <dt>Quantity</dt>
+  <dd>{{product.qty}}</dd>
+  <dt>Manufacturing</dt>
+  <dd>{{product.mfg.toLocaleDateString()}}</dd>
+  <dt>Priview</dt>
+  <dd><img src="{{product.preview}}" width="100" height="100"></dd>
+  <dt>Total Amount</dt>
+  <dd>{{GetTotal()}}</dd>
+</dl>

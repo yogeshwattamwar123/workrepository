@@ -1,0 +1,25 @@
+
+<fieldset>
+  <legend>Add Product Details</legend>
+  <dl>
+    <dt>Name</dt>
+    <dd><input type="text" [(ngModel)]="txtname"></dd>
+    <dt>Price</dt>
+    <dd><input type="text" [(ngModel)]="txtprice"></dd>
+  </dl>
+  <br>
+  <button (click)="Addproduct()">Add Product</button>
+</fieldset>
+<h3>Product List</h3>
+<table width="400" border="1">
+  <th>Product Id</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Action</th>
+  <tr *ngFor="let item of products; let i=index;">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td><button (click)="Deleteproduct(i)">Delete</button></td>
+  </tr>
+</table>

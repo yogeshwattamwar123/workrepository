@@ -1,0 +1,59 @@
+<div class="container">
+  <h2>Shopping Cart</h2>
+  <table width="400" align="center">
+    <tr>
+      <td>
+        <label class="control-label">Select a Categroy</label>
+        <select [(ngModel)]="LstCategories" (change)="SelectedCategoryChanged()" class="from-control">
+          <option *ngFor="let item of categories">
+            {{item}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label class="control-label">Select a Product</label>
+        <select [(ngModel)]="LstProducts" (change)="SelectedProductChanged()" class="from-control">
+          <option *ngFor="let item of products">
+            {{item}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label class="control-label">Preview</label>
+        <h3>{{ProdName}}</h3>
+        <img [src]="ProdPhoto" width="400" height="250">
+        <label class="control-label">{{ProdPrice | currency:'INR'}} | Choose Quantity : </label>
+        <input [(ngModel)]="qty" [value]="qty" type="number" min="1" max="5">
+        <label class="control-label">Total Amount : {{qty*ProdPrice}}</label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="6">
+        <button (click)="AddProduct()">Add Product</button>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <th>Sr no</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Qty</th>
+    <th>Amount</th>
+    <th>Preview</th>
+    <th>Action</th>
+    <tr *ngFor="let item of addproduct;let i=index">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.qty}}</td>
+      <td>{{item.amount}}</td>
+      <td><img [src]="item.preciew"></td>
+      <td><button (click)="deleteproduct(i)">Delete</button></td>
+    </tr>
+  </table>
+</div>

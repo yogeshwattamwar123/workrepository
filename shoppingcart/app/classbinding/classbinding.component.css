@@ -1,0 +1,9 @@
+.texteffect{
+    text-align: center
+}
+.backeffect{
+    background: red;
+}
+.bordereffect{
+    border:1px solid #000;
+}

@@ -1,0 +1,9 @@
+<h2>Data List</h2>
+<ol>
+  <li *ngFor="let item of datalist">
+    {{item.category}}
+    <ol type="a">
+      <li *ngFor="let product of item.products">{{product}}</li>
+    </ol>
+  </li>
+</ol>

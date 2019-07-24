@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Mongo Products table</h2>
+  <table border="1" width="400">
+    <th>Name</th>
+    <th>Price</th>
+    <tr *ngFor="let item of products">
+      <td>{{item.Name}}</td>
+      <td>{{item.Price}}</td>
+    </tr>
+  </table>
+</div>

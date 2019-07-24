@@ -1,0 +1,22 @@
+<h3>Angular Iteration Properties</h3>
+<button (click)="updatetable()">Update table</button>
+<table border="1">
+  <th>ID</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Index</th>
+  <th>First</th>
+  <th>last</th>
+  <th>Even</th>
+  <th>odd</th>
+  <tr *ngFor="let item of productdetail; let i=index;let first=first; let last=last;let even=even;let odd=odd;trackBy:trackById">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{i}}</td>
+    <td>{{first}}</td>
+    <td>{{last}}</td>
+    <td>{{even}}</td>
+    <td>{{odd}}</td>
+  </tr>
+</table>

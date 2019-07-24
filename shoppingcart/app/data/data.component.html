@@ -1,0 +1,14 @@
+<app-filter (Categorychanged)="Oncategorychanged($event)"></app-filter>
+<br>
+<table width="400" border="1">
+  <th>Name</th>
+  <th>Price</th>
+  <th>Category</th>
+  <ng-container *ngFor="let item of products">
+    <tr *ngIf="selectedvalue == 'All' || selectedvalue == item.Category">
+      <td>{{item.Name}}</td>
+      <td>{{item.Price}}</td>
+      <td>{{item.Category}}</td>
+    </tr>
+  </ng-container>
+</table>

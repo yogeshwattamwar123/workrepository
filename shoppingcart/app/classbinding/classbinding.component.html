@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="textinput" placeholder="texteffect,backeffect,bordereffect">
+<h2 [ngClass]=textinput>welcome to angular</h2>
+Choose Effects
+<br>
+<input type="checkbox" [(ngModel)]="istexteffect">Text Effect
+<br>
+<input type="checkbox" [(ngModel)]="isbackeffect">back Effect
+<br>
+<input type="checkbox" [(ngModel)]="isbordereffect">Border Effect
+<br>
+<h2 [ngClass]={texteffect:istexteffect,backeffect:isbackeffect,bordereffect:isbordereffect}>welcome to angular</h2>

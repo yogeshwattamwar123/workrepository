@@ -1,0 +1,64 @@
+<form #frmaddapidata="ngForm" (submit)="addapidata(frmaddapidata.value)">
+<fieldset>
+    <dt>Employee Name</dt>
+    <dd><input type="text" ngModel name="employeename" #employeename="ngModel"></dd>
+    <dt>Employee Salary</dt>
+    <dd><input type="text" ngModel name="employeesalary" #employeesalary="ngModel"></dd>
+    <dt>Employee DOB</dt>
+    <dd><input type="text" ngModel name="employeedob" #employeedob="ngModel"></dd>
+    <dt>Employee Department</dt>
+    <dd><input type="text" ngModel name="employeedepartment" #employeedepartment="ngModel"></dd>
+    <dt>Employee Technology</dt>
+    <dd><input type="text" ngModel name="technology" #technology="ngModel"></dd>
+    <dt>Employee Duration</dt>
+    <dd><input type="text" ngModel name="duration" #duration="ngModel"></dd>
+    <dt></dt>
+    <dd><button>Add</button></dd>
+</fieldset>
+</form>
+
+<table border="1" align="center">
+  <tr align="center"><td colspan="20">Semister</td></tr>
+  <tr align="center">
+    <td>EmployeeName</td>
+    <td>EmployeeSalary</td>
+    <td >
+      <tr>
+        <td colspan="8">EmployeeDetails</td>
+      </tr>
+      <tr>
+        <td>EmployeeDOB</td>
+        <td>EmployeeDepartment</td>
+        <td >
+          <tr>
+            <td colspan="8">EmployeeProject</td>
+          </tr>
+          <tr>
+            <td>technology</td>
+            <td>duration</td>
+          </tr>
+        </td>
+      </tr>
+    </td>
+    <td>Action</td>
+  </tr>
+  <tr align="center" *ngFor="let item of apidata">
+    <td>{{item.employeename}}</td>
+    <td>{{item.employeesalary}}</td>
+    <td>
+      <tr *ngFor="let subitem of item.employeedetails">
+        <td>{{subitem.employeedob}}</td>
+        <td>{{subitem.employeedepartment}}</td>
+        <td >
+          <tr *ngFor="let subsubitem of subitem.employeeproject">
+            <td>{{subsubitem.technology}}</td>
+            <td>{{subsubitem.duration}}</td>
+          </tr>
+        </td>
+      </tr>
+    </td>
+    <td>
+      <button (click)="editapidata($event)" id="{{item.employeesalary}}">Edit</button> 
+      <button (click)="deleteapidata($event)" id="{{item.employeesalary}}">Delete</button></td>
+  </tr>
+</table>

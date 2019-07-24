@@ -1,0 +1,24 @@
+<div>
+  <fieldset>
+    <legend>Add Product</legend>
+    <form #frmRegister="ngForm" (submit)="AddProduct(frmRegister.value)">
+      <dl>
+        <dt>Name</dt>
+        <dd><input type="text" ngModel #name="ngModel" name="name"></dd>
+        <dt>Price</dt>
+        <dd><input type="text" ngModel #price="ngModel" name="price"></dd>
+      </dl>
+      <br>
+      <button>Add Product</button>
+    </form>
+  </fieldset>
+  <h2>Product List</h2>
+  <table border="1" width="400">
+    <th>Name</th>
+    <th>Price</th>
+    <tr *ngFor="let item of products">
+      <td>{{item.Name}}</td>
+      <td>{{item.Price}}</td>
+    </tr>
+  </table>
+</div>

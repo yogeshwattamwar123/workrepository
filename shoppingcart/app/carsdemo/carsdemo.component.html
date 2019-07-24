@@ -1,0 +1,7 @@
+<div align="center" *ngFor="let car of cars">
+  <h3>{{car.title}}</h3>
+  <img [src]="car.imgsrc">
+  <br>
+  <img src="assets/like.jpg" width="80" (click)="likescounter(car)"> {{car.likes}} <span>/</span> 
+  <img src="assets/dislike.png" width="100" (click)="dislikecounter(car)"> {{car.dislikes}}
+</div>

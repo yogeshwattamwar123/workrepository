@@ -1,0 +1,12 @@
+<dl>
+  <dt>Name</dt>
+  <dd>{{product.Name}}</dd>
+  <dt>Price</dt>
+  <dd>{{product.Price}}</dd>
+  <dt>Manufactured</dt>
+  <dd>{{product.Mfd}}</dd>
+  <dt><button (click)="ShowhidePreview()">{{isVisible?'Hide':'Show'}}</button></dt>
+  <dd *ngIf="isVisible">
+    <img [src]="product.Photo" width="200" height="200">
+  </dd>
+</dl>

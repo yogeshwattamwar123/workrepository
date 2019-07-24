@@ -1,0 +1,22 @@
+<legend>Select Effects</legend>
+<dl>
+  <dt>Background Color</dt>
+  <dd>
+    <select [(ngModel)]="backcolor">
+      <option>Green</option>
+      <option>Blue</option>
+      <option>Red</option>
+    </select>
+  </dd>
+  <dt>Text Color</dt>
+  <dd>
+    <select [(ngModel)]="textcolor">
+      <option>white</option>
+      <option>yellow</option>
+      <option>gray</option>
+    </select>
+  </dd>
+  <dt>
+    <h2 [ngStyle]="Effects()">Wel come to angular</h2>
+  </dt>
+</dl>

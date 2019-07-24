@@ -1,0 +1,17 @@
+<h3>Category List</h3>
+<ol>
+  <li *ngFor="let item of catergories">
+    <span [innerHTML]="item"></span>
+  </li>
+</ol>
+<h3>Product List</h3>
+<table width="400" border="1">
+  <th>Name</th>
+  <th>Price</th>
+  <th>Preview</th>
+  <tr *ngFor="let product of products">
+    <td [innerHTML]="product.Name"></td>
+    <td [innerHTML]="product.Price"></td>
+    <td><img [src]="product.Photo"></td>
+  </tr>
+</table>

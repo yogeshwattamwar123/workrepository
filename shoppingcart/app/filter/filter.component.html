@@ -1,0 +1,9 @@
+<fieldset>
+  <legend>Filter Products</legend>
+  {{SelectedcategoryValue}}
+  <select (change)="Oncategorychanged()" [(ngModel)]="SelectedcategoryValue">
+    <option value="All">All</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Shoes">Shoes</option>
+  </select>
+</fieldset>

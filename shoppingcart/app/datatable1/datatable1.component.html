@@ -1,0 +1,14 @@
+<table>
+  <thead class="headerstyle">
+    <th>Product Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Action</th>
+  </thead>
+  <tr [class.even]=even [class.odd]=odd *ngFor="let item of products; let odd=odd;let even=even;">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td><button (click)="Deleteproduct(i)">Delete</button></td>
+  </tr>
+</table>

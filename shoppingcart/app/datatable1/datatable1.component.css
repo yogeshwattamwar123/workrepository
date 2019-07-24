@@ -1,0 +1,12 @@
+.headerstyle{
+    background: darkblue;
+    color: white;
+}
+.odd{
+    background: green;
+    color: white;
+}
+.even{
+    background: red;
+    color: white;
+}
